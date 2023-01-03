@@ -8,11 +8,11 @@ const AddUser = () => {
 
     const user = { name, email };
 
-    // send data t the server
+    // send data to the server
     fetch("http://localhost:5000/user", {
       method: "POST",
       headers: {
-        "content-type:": "application/json",
+        "content-type": "application/json",
       },
       body: JSON.stringify(user),
     })
@@ -23,11 +23,11 @@ const AddUser = () => {
   };
   return (
     <div>
-      <h2>Please add a user</h2>
+      <h2>Please add a new User</h2>
       <form onSubmit={handleAddUser}>
         <input type="text" name="name" placeholder="Name" required />
         <br />
-        <input type="email" name="email" placeholder="email" required />
+        <input type="email" name="email" placeholder="Email" required />
         <br />
         <input type="submit" value="Add User" />
       </form>
